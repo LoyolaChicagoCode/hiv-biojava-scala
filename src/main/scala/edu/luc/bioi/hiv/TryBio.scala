@@ -46,7 +46,7 @@ object TryBio {
     f <- sequence.features.asScala
     // skip features without gene annotation
     g <- f.getAnnotation get "gene"
-    if f.getType == "CDS" && (allowedGenes contains g)
+    if f.getType == "CDS" //&& (allowedGenes contains g)
     l = f.getLocation
   } yield GeneInformation(g, l.getMin - 1, l.getMax - 1)
   // these values start at 1, so we need to normalize for substring
