@@ -19,6 +19,17 @@ These really are the only required prerequisites.
 
 # Command-line
 
+## Feteching the data
+
+The Genbank files are no longer being kept on GitHub. They're now in a 
+figshare dataset at http://figshare.com/articles/hivdb/1564844. You don't need
+to go there to download the files. A script is provided to fetch the data 
+sets into data/ (and this folder is on the .gitignore list).
+
+To populate the data, do this from the checkout directory:
+
+    $ ./scripts/get-data.sh 
+
 ## Running the sample application
 
 This creates the launch script (so it is easy to run like a regular command line program):
